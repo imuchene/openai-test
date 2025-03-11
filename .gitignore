@@ -1,0 +1,5 @@
+# Ignore secrets
+.env
+
+# Ignore installed packages
+node_modules/
