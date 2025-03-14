@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@cyber2024/pdf-parse-fixed": "^1.2.5",
     "dotenv": "^16.4.7",
+    "llamaindex": "^0.9.11",
     "openai": "^4.86.1"
   }
 }

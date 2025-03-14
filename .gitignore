@@ -3,3 +3,8 @@
 
 # Ignore installed packages
 node_modules/
+
+*.pdf
+
+# Ignore vector outputs
+storage/
