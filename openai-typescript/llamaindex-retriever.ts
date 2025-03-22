@@ -1,11 +1,9 @@
-import dotenv from 'dotenv';
+import '@dotenvx/dotenvx/config';
 import OpenAI from 'openai';
 import { LlamaParseReader, VectorStoreIndex, Settings, TextNode } from 'llamaindex';
 
-dotenv.config();
-
 const reader = new LlamaParseReader({ resultType: 'text' });
-const document = await reader.loadData('./embeddings/thesis.pdf');
+const document = await reader.loadData('../embeddings/thesis.pdf');
 
 Settings.chunkSize = 4000;
 Settings.chunkOverlap = 500;
@@ -28,7 +26,6 @@ const knowledge = matchingNodes.map(node => {
 }).join('\n\n');
 
 // Querying OpenAI
-
 const openAI = new OpenAI();
 const response = await openAI.chat.completions.create({
   model: 'gpt-4o-mini',

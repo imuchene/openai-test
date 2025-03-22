@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@cyber2024/pdf-parse-fixed": "^1.2.5",
-    "dotenv": "^16.4.7",
+    "@dotenvx/dotenvx": "^1.39.0",
     "llamaindex": "^0.9.11",
     "openai": "^4.86.1"
   }
