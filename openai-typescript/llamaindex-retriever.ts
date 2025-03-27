@@ -13,7 +13,7 @@ console.log('Creating the index');
 const index = await VectorStoreIndex.fromDocuments(document);
 console.log('index created', index);
 
-const query = 'Which technologies can be used to solve congestion at airports?';
+const query: string = 'Which technologies can be used to solve congestion at airports?';
 
 
 const retriever = index.asRetriever({ similarityTopK: 3 });

@@ -15,8 +15,6 @@ const functions: any = {
   }
 }
 
-
-
 // Querying OpenAI
 const openAI = new OpenAI();
 
@@ -55,7 +53,6 @@ const response = await openAI.chat.completions.create({
 })
 
 console.log('response', response.choices[0]);
-
 
 const tool_calls = response.choices[0].message.tool_calls;
 
